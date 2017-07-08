@@ -1,0 +1,11 @@
+
+@reboot sh /home/pksminer/Sandbox/Scripts/startup_eth_sia.sh
+#@reboot sh /home/pksminer/Sandbox/Scripts/startup_zec.sh
+
+@reboot sh /home/pksminer/Sandbox/Scripts/start_monitoring_services.sh
+
+*/5 * * * *  sh /home/pksminer/Sandbox/TelegramBot/run_summary.sh
+*/30 * * * * sh /home/pksminer/Sandbox/TelegramBot/run_temp.sh
+*/60 * * * * sh /home/pksminer/Sandbox/TelegramBot/run_stats.sh
+
+*/5 * * * * ~/duckdns/duck.sh >/dev/null 2>&1
