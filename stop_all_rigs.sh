@@ -6,7 +6,7 @@
 # Distributed under terms of the MIT license.
 #
 
-# stops mininig services on local machine rig1 (pksminer01)
+# stops all the mining services on rig1 (pksminer01) and rig2 (pksminer02)
 
 echo "Stopping all Services"
 PID=`ps -eaf | grep tmux | grep -v grep | awk '{print $2}'`
@@ -19,4 +19,5 @@ fi
 
 echo "Done"
 
+ssh pksminer02 'sh /home/pksminer/Sandbox/Scripts/stop_all_services.sh'
 

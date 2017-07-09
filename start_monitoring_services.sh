@@ -6,8 +6,9 @@
 # Distributed under terms of the MIT license.
 #
 
-cd /home/pksminer/Sandbox/MineTrack/
-sh /run.sh > log.txt > 2&1
+# starts the python web services to get gpu information
+sh /home/pksminer/Sandbox/MineTrack/run.sh
 
-cd /home/pksminer/Sandbox/TelegramBot/
-sh /run.sh > log.txt > 2&1
+# starts the telegram bot
+sh /home/pksminer/Sandbox/TelegramBot/run.sh
+
